@@ -3,71 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rizwan Dental Supply</title>
+    <title>Rizwan Dental Supply | Lahore</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-icon { animation: float 3s ease-in-out infinite; }
+        .hover-card:hover { transform: translateY(-10px) scale(1.02); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    </style>
 </head>
-<body class="bg-[#0f172a] text-gray-200 font-sans leading-relaxed">
+<body class="bg-[#0f172a] text-gray-200 font-sans overflow-x-hidden">
 
-    <header class="relative py-20 px-6 text-center overflow-hidden bg-gradient-to-b from-[#1e293b] to-[#0f172a]">
-        <div class="relative z-10">
-            <h1 class="text-4xl md:text-7xl font-extrabold text-white tracking-tight mb-4">
+    <div id="status-bar" class="py-2 text-center text-[10px] font-bold tracking-[0.3em] uppercase border-b border-gray-800 animate__animated animate__fadeInDown">
+        Checking Status...
+    </div>
+
+    <header class="py-24 px-6 text-center bg-gradient-to-b from-[#1e293b] to-[#0f172a] relative overflow-hidden">
+        <div class="relative z-10 animate__animated animate__zoomIn">
+            <h1 class="text-5xl md:text-7xl font-black text-white tracking-tighter mb-2 uppercase">
                 RIZWAN <span class="text-blue-500">DENTAL</span> SUPPLY
             </h1>
-            <p class="text-lg md:text-xl text-blue-200 max-w-2xl mx-auto opacity-80">
-                Premium Instruments & Surgical Solutions for Modern Clinics.
-            </p>
+            <p class="text-blue-200/60 italic text-sm tracking-widest animate__animated animate__fadeInUp animate__delay-1s uppercase">Lahore's Premium Dental Hub</p>
         </div>
-        <div class="absolute -top-24 -left-24 w-64 h-64 bg-blue-600 rounded-full blur-[120px] opacity-20"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-blue-600/10 blur-[130px]"></div>
     </header>
 
-    <section class="max-w-6xl mx-auto py-16 px-6">
-        <div class="grid md:grid-cols-3 gap-8 text-center">
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <div class="bg-[#1e293b] p-8 rounded-2xl border border-gray-700 hover:border-blue-500 transition-all duration-300 shadow-xl group">
-                <i class="fa-solid fa-tooth text-4xl text-blue-500 mb-6"></i>
-                <h3 class="text-xl font-bold text-white mb-2">Dental Instruments</h3>
-                <p class="text-gray-400">High-grade stainless steel mirrors, probes, and surgical forceps.</p>
-            </div>
+            <a href="instruments.html" class="hover-card group bg-[#1e293b] p-10 rounded-[2.5rem] border border-gray-800 hover:border-blue-500 shadow-2xl flex items-center justify-between animate__animated animate__fadeInLeft">
+                <div>
+                    <div class="float-icon inline-block"><i class="fa-solid fa-tooth text-4xl text-blue-500 mb-6 block"></i></div>
+                    <h3 class="text-2xl font-bold text-white uppercase tracking-tight">Instruments</h3>
+                    <p class="text-gray-400 text-xs mt-2 italic font-light tracking-widest">Surgical Precision</p>
+                </div>
+                <i class="fa-solid fa-arrow-right text-gray-700 group-hover:text-blue-500 text-2xl transition-all"></i>
+            </a>
 
-            <div class="bg-[#1e293b] p-8 rounded-2xl border border-gray-700 hover:border-blue-500 transition-all duration-300 shadow-xl">
-                <i class="fa-solid fa-chair text-4xl text-blue-500 mb-6"></i>
-                <h3 class="text-xl font-bold text-white mb-2">Clinic Equipment</h3>
-                <p class="text-gray-400">Modern dental units, compressors, and autoclave systems.</p>
-            </div>
+            <a href="equipment.html" class="hover-card group bg-[#1e293b] p-10 rounded-[2.5rem] border border-gray-800 hover:border-blue-500 shadow-2xl flex items-center justify-between animate__animated animate__fadeInRight">
+                <div>
+                    <div class="float-icon inline-block" style="animation-delay: 0.5s;"><i class="fa-solid fa-chair text-4xl text-blue-500 mb-6 block"></i></div>
+                    <h3 class="text-2xl font-bold text-white uppercase tracking-tight">Equipment</h3>
+                    <p class="text-gray-400 text-xs mt-2 italic font-light tracking-widest">Modern Clinic Setup</p>
+                </div>
+                <i class="fa-solid fa-arrow-right text-gray-700 group-hover:text-blue-500 text-2xl transition-all"></i>
+            </a>
 
-            <div class="bg-[#1e293b] p-8 rounded-2xl border border-gray-700 hover:border-blue-500 transition-all duration-300 shadow-xl">
-                <i class="fa-solid fa-kit-medical text-4xl text-blue-500 mb-6"></i>
-                <h3 class="text-xl font-bold text-white mb-2">Orthodontic Supplies</h3>
-                <p class="text-gray-400">Premium brackets, wires, and clinic disposable materials.</p>
-            </div>
+            <a href="material.html" class="hover-card group bg-[#1e293b] p-10 rounded-[2.5rem] border border-gray-800 hover:border-blue-500 shadow-2xl flex items-center justify-between animate__animated animate__fadeInLeft animate__delay-1s">
+                <div>
+                    <div class="float-icon inline-block" style="animation-delay: 1s;"><i class="fa-solid fa-vial text-4xl text-blue-500 mb-6 block"></i></div>
+                    <h3 class="text-2xl font-bold text-white uppercase tracking-tight">Material</h3>
+                    <p class="text-gray-400 text-xs mt-2 italic font-light tracking-widest">Fillings & Cements</p>
+                </div>
+                <i class="fa-solid fa-arrow-right text-gray-700 group-hover:text-blue-500 text-2xl transition-all"></i>
+            </a>
+
+            <a href="disposables.html" class="hover-card group bg-[#1e293b] p-10 rounded-[2.5rem] border border-gray-800 hover:border-blue-500 shadow-2xl flex items-center justify-between animate__animated animate__fadeInRight animate__delay-1s">
+                <div>
+                    <div class="float-icon inline-block" style="animation-delay: 1.5s;"><i class="fa-solid fa-box-archive text-4xl text-blue-500 mb-6 block"></i></div>
+                    <h3 class="text-2xl font-bold text-white uppercase tracking-tight">Disposables</h3>
+                    <p class="text-gray-400 text-xs mt-2 italic font-light tracking-widest">Safe & Sterile</p>
+                </div>
+                <i class="fa-solid fa-arrow-right text-gray-700 group-hover:text-blue-500 text-2xl transition-all"></i>
+            </a>
 
         </div>
-    </section>
+    </main>
 
-    <section class="max-w-4xl mx-auto my-12 px-6">
-        <div class="bg-gradient-to-r from-blue-700 to-blue-900 rounded-3xl p-10 text-center shadow-2xl border border-blue-400/20">
-            <h2 class="text-3xl font-bold text-white mb-2 italic">Ready to Upgrade Your Clinic?</h2>
-            <p class="text-blue-100 mb-10 opacity-90 text-lg">Direct delivery in Lahore and supply all over Pakistan.</p>
+    <footer class="max-w-4xl mx-auto px-6 pb-20 mt-12 animate__animated animate__fadeInUp">
+        <div class="bg-gradient-to-br from-blue-600 to-blue-900 rounded-[3rem] p-12 text-center shadow-2xl relative overflow-hidden">
+            <h3 class="text-3xl font-bold text-white mb-2 tracking-tighter">LAHORE MAIN BRANCH</h3>
+            <p class="text-blue-100 text-xs mb-10 opacity-70 uppercase tracking-[0.3em]">Qazi Town, Multan Road</p>
             
             <div class="flex flex-col md:flex-row justify-center gap-6">
-                <a href="tel:+923096700704" class="bg-white text-blue-900 px-10 py-4 rounded-xl font-black uppercase tracking-wider hover:bg-gray-200 transition-all flex items-center justify-center gap-3">
+                <a href="tel:+923096700704" class="bg-white text-blue-900 px-10 py-5 rounded-2xl font-black uppercase text-sm shadow-xl hover:bg-gray-100 transition-all flex items-center justify-center gap-3">
                    <i class="fa-solid fa-phone"></i> 0309 6700704
                 </a>
-                <a href="https://wa.me/923096700704" target="_blank" class="bg-[#25D366] text-white px-10 py-4 rounded-xl font-black uppercase tracking-wider hover:opacity-90 transition-all flex items-center justify-center gap-3">
-                   <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                <a href="https://wa.me/923096700704" target="_blank" class="bg-[#25D366] text-white px-10 py-5 rounded-2xl font-black uppercase text-sm shadow-xl hover:opacity-90 transition-all flex items-center justify-center gap-3">
+                   <i class="fa-brands fa-whatsapp text-2xl"></i> WHATSAPP ORDER
                 </a>
             </div>
-            
-            <div class="mt-10 text-blue-100 font-medium bg-blue-950/30 py-3 rounded-full inline-block px-8 border border-blue-400/10">
-                <i class="fa-solid fa-location-dot mr-2 text-blue-400"></i> Qazi Town, Multan Road, Lahore
-            </div>
         </div>
-    </section>
-
-    <footer class="py-12 text-center border-t border-gray-800/50">
-        <p class="text-gray-500 text-xs tracking-[0.3em] uppercase">&copy; 2026 Rizwan Dental Supply | Professional Surgical Excellence</p>
+        <p class="mt-16 text-center text-gray-700 text-[10px] tracking-[0.5em] uppercase font-bold italic">&copy; 2026 Rizwan Dental Supply</p>
     </footer>
 
+    <script>
+        function updateStatus() {
+            const now = new Date();
+            const day = now.getDay(); 
+            const hour = now.getHours();
+            const bar = document.getElementById('status-bar');
+
+            if (day !== 0 && hour >= 10 && hour < 17) {
+                bar.innerHTML = '<span class="text-green-500">●</span> Shop is Open (Closes 5:00 PM)';
+                bar.className = "py-2 text-center text-[10px] font-bold tracking-[0.3em] uppercase border-b border-green-500/20 text-green-400 bg-green-500/5";
+            } else {
+                bar.innerHTML = '<span class="text-red-500">●</span> Shop is Closed (Opens 10:00 AM)';
+                bar.className = "py-2 text-center text-[10px] font-bold tracking-[0.3em] uppercase border-b border-red-500/20 text-red-400 bg-red-500/5";
+            }
+        }
+        updateStatus();
+    </script>
 </body>
 </html>
