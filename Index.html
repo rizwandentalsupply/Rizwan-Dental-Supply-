@@ -1,0 +1,132 @@
+export default function DentalSupplyWebsite() { const products = [ { name: 'Dental Instruments', desc: 'High-quality mirrors, probes, scalers, and forceps for clinics.', }, { name: 'Disposable Supplies', desc: 'Gloves, masks, syringes, bibs, and sterilization products.', }, { name: 'Dental Chairs & Equipment', desc: 'Modern dental chairs, compressors, and clinic equipment.', }, { name: 'Orthodontic Products', desc: 'Brackets, wires, retainers, and treatment accessories.', }, ];
+
+return ( <div className="min-h-screen bg-slate-50 text-slate-800"> <header className="bg-white shadow-sm sticky top-0 z-50"> <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"> <h1 className="text-2xl font-bold text-cyan-700">Rizwan Dental Supply</h1> <nav className="hidden md:flex gap-6 text-sm font-medium"> <a href="#home" className="hover:text-cyan-700">Home</a> <a href="#products" className="hover:text-cyan-700">Products</a> <a href="#about" className="hover:text-cyan-700">About</a> <a href="#contact" className="hover:text-cyan-700">Contact</a> </nav> </div> </header>
+
+<section id="home" className="bg-gradient-to-r from-cyan-700 to-blue-700 text-white">
+    <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p className="uppercase tracking-widest text-cyan-100 mb-3">Trusted Dental Equipment Supplier</p>
+        <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+          Everything Your Dental Clinic Needs
+        </h2>
+        <p className="text-lg text-cyan-100 mb-8 max-w-xl">
+          We provide premium dental tools, disposable supplies, clinic equipment, and orthodontic products with reliable service.
+        </p>
+        <div className="flex gap-4 flex-wrap">
+          <a
+            href="#products"
+            className="bg-white text-cyan-700 px-6 py-3 rounded-2xl font-semibold shadow-lg hover:scale-105 transition"
+          >
+            View Products
+          </a>
+          <a
+            href="#contact"
+            className="border border-white px-6 py-3 rounded-2xl font-semibold hover:bg-white hover:text-cyan-700 transition"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+
+      <div className="bg-white/10 rounded-3xl p-8 backdrop-blur shadow-2xl">
+        <div className="grid grid-cols-2 gap-4">
+          <div className="bg-white rounded-2xl p-5 text-slate-800 shadow-lg">
+            <h3 className="font-bold text-lg mb-2">500+</h3>
+            <p className="text-sm text-slate-600">Products Available</p>
+          </div>
+          <div className="bg-white rounded-2xl p-5 text-slate-800 shadow-lg">
+            <h3 className="font-bold text-lg mb-2">24/7</h3>
+            <p className="text-sm text-slate-600">Customer Support</p>
+          </div>
+          <div className="bg-white rounded-2xl p-5 text-slate-800 shadow-lg">
+            <h3 className="font-bold text-lg mb-2">100%</h3>
+            <p className="text-sm text-slate-600">Trusted Quality</p>
+          </div>
+          <div className="bg-white rounded-2xl p-5 text-slate-800 shadow-lg">
+            <h3 className="font-bold text-lg mb-2">Fast</h3>
+            <p className="text-sm text-slate-600">Delivery Service</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" className="max-w-7xl mx-auto px-6 py-20">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl font-bold mb-4">Our Products</h2>
+      <p className="text-slate-600 max-w-2xl mx-auto">
+        Browse our wide range of premium dental supplies designed for clinics, hospitals, and professionals.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {products.map((product, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-3xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-2 transition"
+        >
+          <div className="w-14 h-14 rounded-2xl bg-cyan-100 flex items-center justify-center text-cyan-700 text-2xl mb-5">
+            🦷
+          </div>
+          <h3 className="text-xl font-bold mb-3">{product.name}</h3>
+          <p className="text-slate-600 text-sm leading-6">{product.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section id="about" className="bg-white py-20">
+    <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 className="text-4xl font-bold mb-6">Why Choose Us?</h2>
+        <p className="text-slate-600 leading-8 mb-4">
+          Rizwan Dental Supply is committed to providing reliable, affordable, and high-quality dental products for clinics and healthcare professionals.
+        </p>
+        <p className="text-slate-600 leading-8">
+          Our mission is to help dental practices work more efficiently with modern tools and trusted supplies.
+        </p>
+      </div>
+
+      <div className="grid gap-4">
+        <div className="bg-slate-100 rounded-2xl p-5">
+          <h3 className="font-bold mb-2">Premium Quality</h3>
+          <p className="text-sm text-slate-600">All products are carefully selected and tested.</p>
+        </div>
+        <div className="bg-slate-100 rounded-2xl p-5">
+          <h3 className="font-bold mb-2">Affordable Prices</h3>
+          <p className="text-sm text-slate-600">Competitive rates for clinics and dental businesses.</p>
+        </div>
+        <div className="bg-slate-100 rounded-2xl p-5">
+          <h3 className="font-bold mb-2">Fast Delivery</h3>
+          <p className="text-sm text-slate-600">Quick shipping and customer support whenever needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" className="bg-slate-900 text-white py-20">
+    <div className="max-w-5xl mx-auto px-6 text-center">
+      <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
+      <p className="text-slate-300 mb-10">
+        Ready to order dental supplies? Contact us today.
+      </p>
+
+      <div className="grid md:grid-cols-3 gap-6 text-left">
+        <div className="bg-slate-800 rounded-2xl p-6">
+          <h3 className="font-semibold mb-2">Phone</h3>
+          <p className="text-slate-300">+92 300 1234567</p>
+        </div>
+        <div className="bg-slate-800 rounded-2xl p-6">
+          <h3 className="font-semibold mb-2">Email</h3>
+          <p className="text-slate-300">info@dentalsupplyhub.com</p>
+        </div>
+        <div className="bg-slate-800 rounded-2xl p-6">
+          <h3 className="font-semibold mb-2">Address</h3>
+          <p className="text-slate-300">Punjab, Pakistan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+); }
