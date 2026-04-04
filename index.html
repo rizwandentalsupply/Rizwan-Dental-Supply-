@@ -7,113 +7,38 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-white text-gray-900 font-sans p-6">
+<body class="bg-[#0f172a] text-gray-200 font-sans">
 
-    <header class="mb-8">
-        <h1 class="text-3xl font-bold text-gray-900 mb-1">Rizwan Dental Supply</h1>
-        <div class="flex gap-4 text-blue-600 text-sm font-medium mb-2 underline decoration-1 underline-offset-4">
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+    <header class="text-center py-12 px-4 border-b border-gray-800">
+        <div class="inline-flex items-center gap-3 mb-3">
+            <i class="fa-solid fa-tooth text-blue-500 text-3xl"></i>
+            <h1 class="text-4xl font-black text-white italic tracking-tighter leading-none">
+                RIZWAN <span class="text-blue-500">DENTAL</span><br>
+                <span class="text-gray-600 text-[9px] font-bold tracking-[0.5em] uppercase">Supply & Co.</span>
+            </h1>
         </div>
-        <p class="text-xs text-gray-500 uppercase tracking-widest">Trusted Dental Equipment Supplier</p>
+        <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.4em]">Everything Your Dental Clinic Needs</p>
     </header>
 
-    <section class="mb-8">
-        <h2 class="text-2xl font-bold mb-3 text-gray-900">Everything Your Dental Clinic Needs</h2>
-        <p class="text-sm text-gray-600 leading-relaxed">
-            We provide premium dental tools, disposable supplies, clinic equipment, and orthodontic products with reliable service.
-        </p>
-    </section>
+    <main class="max-w-4xl mx-auto p-6 space-y-8">
 
-    <div class="mb-10">
-        <input type="text" id="mainSearch" onkeyup="globalSearch()" 
-               placeholder="Search Products..." 
-               class="w-full border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-blue-500 transition-all">
-        <div id="searchResults" class="mt-4 space-y-4"></div>
-    </div>
-
-    <div id="homeContent" class="space-y-6">
-        
-        <div class="space-y-4">
-            <div>
-                <p class="font-bold text-lg leading-none">500+</p>
-                <p class="text-sm text-gray-500">Products Available</p>
-            </div>
-            <div>
-                <p class="font-bold text-lg leading-none">24/7</p>
-                <p class="text-sm text-gray-500">Customer Support</p>
-            </div>
-            <div>
-                <p class="font-bold text-lg leading-none">100%</p>
-                <p class="text-sm text-gray-500">Trusted Quality</p>
-            </div>
-            <div>
-                <p class="font-bold text-lg leading-none">Fast</p>
-                <p class="text-sm text-gray-500">Delivery Service</p>
-            </div>
-        </div>
-
-        <div class="pt-8 border-t border-gray-100">
-            <h3 class="text-xl font-bold mb-4">Our Categories</h3>
-            <ul class="space-y-3">
-                <li><a href="instruments.html" class="text-blue-600 font-bold hover:underline">→ Dental Instruments</a></li>
-                <li><a href="material.html" class="text-blue-600 font-bold hover:underline">→ Dental Materials</a></li>
-                <li><a href="equipment.html" class="text-blue-600 font-bold hover:underline">→ Clinical Equipment</a></li>
-            </ul>
-        </div>
-
-        <div class="pt-8 border-t border-gray-100">
-            <h3 class="text-xl font-bold mb-4">Get In Touch</h3>
-            <div class="space-y-4">
+        <a href="instruments.html" class="block relative h-64 rounded-3xl overflow-hidden group border border-gray-800 shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1610363261314-15949d0d366a?q=80&w=600&auto=format&fit=crop" 
+                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 flex items-center gap-4">
+                <i class="fa-solid fa-screwdriver-wrench text-blue-500 text-3xl"></i>
                 <div>
-                    <p class="font-bold text-sm uppercase text-gray-400">Phone</p>
-                    <a href="tel:+923096700704" class="text-gray-900 font-medium">+92 309 6700704</a>
+                    <h2 class="text-2xl font-bold text-white uppercase italic tracking-tight mb-1">Dental Instruments</h2>
+                    <p class="text-xs text-gray-300">Premium Surgical & Diagnostic Tools</p>
                 </div>
-                <div>
-                    <p class="font-bold text-sm uppercase text-gray-400">WhatsApp</p>
-                    <a href="https://wa.me/923096700704" class="text-green-600 font-bold">Chat with M. Rizwan</a>
-                </div>
+                <i class="fa-solid fa-arrow-right text-gray-400 group-hover:translate-x-2 transition-transform"></i>
             </div>
-        </div>
-    </div>
+        </a>
 
-    <script src="data.js"></script>
-    <script>
-        function globalSearch() {
-            let input = document.getElementById('mainSearch').value.toLowerCase();
-            let resultsDiv = document.getElementById('searchResults');
-            let content = document.getElementById('homeContent');
-            
-            if (input.trim() === "") {
-                resultsDiv.innerHTML = "";
-                content.style.display = "block";
-                return;
-            }
-
-            content.style.display = "none";
-            resultsDiv.innerHTML = ""; 
-
-            for (let id in productDetails) {
-                let item = productDetails[id];
-                if (item.name.toLowerCase().includes(input)) {
-                    resultsDiv.innerHTML += `
-                        <div class="border border-gray-200 p-4 rounded-lg flex items-center gap-4">
-                            <img src="${id}.jpg" class="w-16 h-16 object-cover rounded-md bg-gray-100" onerror="this.src='${id}.jpeg'">
-                            <div class="flex-1">
-                                <h4 class="font-bold text-gray-900">${item.name}</h4>
-                                <p class="text-blue-600 font-bold">Rs. ${item.price}</p>
-                                <a href="https://wa.me/923096700704?text=Order:${item.name}" class="text-[10px] text-green-600 font-bold uppercase underline">Order Now</a>
-                            </div>
-                        </div>
-                    `;
-                }
-            }
-        }
-    </script>
-</body>
-</html>
-
-
-
+        <a href="material.html" class="block relative h-64 rounded-3xl overflow-hidden group border border-gray-800 shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1610363261314-15949d0d366a?q=80&w=600&auto=format&fit=crop" 
+                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 flex items-center gap-4">
+                
